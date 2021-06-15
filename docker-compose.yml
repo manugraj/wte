@@ -1,0 +1,16 @@
+version: '3'
+services:
+  rule-engine-poc:
+    container_name: wte
+    image: wte:v1
+    environment:
+      -DOCS_ENABLED=false
+      -PORT=8080
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        environment: dev
+        status: stable
+    ports:
+      - 8080:8080

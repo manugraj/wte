@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: WTE Engine
+  jackson:
+    default-property-inclusion: non_empty
+logging:
+  level:
+    root: ERROR
+server:
+  port: 8082
+springdoc:
+  api-docs:
+    enabled: ${DOCS_ENABLED:false}
+    path: /docs
